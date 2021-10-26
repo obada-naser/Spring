@@ -17,7 +17,9 @@ public class Album {
     private int length ;
     private String imageUrl ;
 
+    public Album() {
 
+    }
 
     public Album(String title, String artist, int songCount, int length, String imageUrl) {
 

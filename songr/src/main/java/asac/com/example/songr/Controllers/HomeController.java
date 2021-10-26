@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 @Controller
-//@RequestMapping("/homeController")
+@RequestMapping("/homeController")
 public class HomeController {
 
     @RequestMapping(value="/hello", method=RequestMethod.GET)

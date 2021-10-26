@@ -24,11 +24,52 @@
 
 <main>
 
+    <form method="POST"  th:object="${album}" th:action="@{v2/newAlbums}">
+        <h3>Add new album:</h3>
 
-<p th:text="${name}"></p>
+        <label >Title</label>
+        <input type="text" name="title"/>
+        <br>
+        <br>
+        <label >Artist</label>
+        <input type="text" name="artist"/>
+        <br>
+        <br>
+        <label >Number Of Songs</label>
+        <input type="number" name="songCount"/>
+        <br>
+        <br>
+        <label >Album Length</label>
+        <input type="number" name="length"/>
+        <br>
+        <br>
+        <label >Image</label>
+        <input type="text" name="imageUrl"/>
+        <br>
+        <br>
+        <button type="submit">Submit The Album</button>
+
+    </form>
 
 
-    <tr th:each="album: ${albums}">
+
+    <p th:text="${name}"></p>
+
+
+    <tr th:each="album: ${albums1}">
+        <td th:text="${album.title}" ></td>
+        </br>
+        <td th:text="${album.artist}" ></td>
+        </br>
+        <td th:text="${album.songCount}" ></td>
+        </br>
+        <td th:text="${album.length}" ></td>
+        </br>
+        <img th:src="${album.imageUrl}" alt="image" />
+
+    </tr>
+
+    <tr th:each="album: ${newAlbum}">
         <td th:text="${album.title}" ></td>
         </br>
         <td th:text="${album.artist}" ></td>
