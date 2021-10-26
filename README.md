@@ -3,7 +3,7 @@
 ## Brief Description:-
 
 It is a basic initialization to spring boot with Thymeleaf. It will be working on the intillij by cloning the code and initialize it.
-And added an entity to make it work in the database that will work when when added into the browser. the routes are:
+And added an entity to make it work in the database that will make it works when added into the browser. the routes are:
 
 main routes: /albumController,/homeController
 
