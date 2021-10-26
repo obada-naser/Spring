@@ -1,14 +1,13 @@
-package asac.com.example.songr;
+package asac.com.example.songr.Controllers;
 
 
+import asac.com.example.songr.Models.Album;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 @Controller
 //@RequestMapping("/homeController")
@@ -67,6 +66,8 @@ public class HomeController {
 
 
     }
+
+
 
 
 
