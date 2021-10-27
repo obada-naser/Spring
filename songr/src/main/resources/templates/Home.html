@@ -24,7 +24,7 @@
 
 <main>
 
-    <form method="POST"  th:object="${album}" th:action="@{v2/newAlbums}">
+    <form method="POST"  th:object="${album}" th:action="@{/newAlbums}">
         <h3>Add new album:</h3>
 
         <label >Title</label>
@@ -68,6 +68,9 @@
         <img th:src="${album.imageUrl}" alt="image" />
 
     </tr>
+
+    <br>
+    <br>
 
     <tr th:each="album: ${newAlbum}">
         <td th:text="${album.title}" ></td>

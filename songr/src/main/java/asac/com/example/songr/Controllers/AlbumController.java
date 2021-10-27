@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.ArrayList;
 
 @Controller
-@RequestMapping("/albumController")
+//@RequestMapping("/albumController")
 public class AlbumController {
     @Autowired
     AlbumRepostitory albumRepostitory;
@@ -25,11 +25,11 @@ public class AlbumController {
             albumRepostitory.save(album1);
             albumRepostitory.save(album2);
         albumRepostitory.save(album3);
-        return new RedirectView("v2/albums");
+        return new RedirectView("/albums");
 
     }
 
-    @GetMapping("v2/albums")
+    @GetMapping("/albums")
     public String getAlbums(Model model){
         ArrayList<Album> albums1= (ArrayList<Album>) albumRepostitory.findAll();
 
@@ -38,7 +38,7 @@ public class AlbumController {
         return "Home";
     }
 
-    @PostMapping("v2/newAlbums")
+    @PostMapping("/newAlbums")
     public RedirectView userAlbum(Model model,@RequestParam(value = "title") String title,
                                                @RequestParam(value="artist") String artist,
                                                  @RequestParam(value = "songCount") int songCount,
@@ -46,17 +46,19 @@ public class AlbumController {
                                                     @RequestParam(value = "imageUrl") String imageUrl){
         Album album=new Album(title,artist,songCount,length,imageUrl);
         albumRepostitory.save(album);
-        return new RedirectView("v2/newAlbums");
+        return new RedirectView("/albums");
     }
 
 
-    @GetMapping("v2/newAlbums")
-    public String newAlbums(Model model){
-        ArrayList<Album> albums2= (ArrayList<Album>) albumRepostitory.findAll();
-
-        model.addAttribute("newAlbum",albums2);
-        return "Home";
-    }
+//    @GetMapping("/newAlbums")
+//    public String newAlbums(Model model){
+//        ArrayList<Album> albums2= (ArrayList<Album>) albumRepostitory.findAll();
+//
+//
+//
+//        model.addAttribute("newAlbum",albums2);
+//        return "Home";
+//    }
 
 
 
