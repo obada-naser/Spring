@@ -42,7 +42,7 @@ public class AlbumController {
     public RedirectView userAlbum(Model model,@RequestParam(value = "title") String title,
                                                @RequestParam(value="artist") String artist,
                                                  @RequestParam(value = "songCount") int songCount,
-                                                    @RequestParam(value = "length") int length,
+                                                    @RequestParam(value = "length") double length,
                                                     @RequestParam(value = "imageUrl") String imageUrl){
         Album album=new Album(title,artist,songCount,length,imageUrl);
         albumRepostitory.save(album);
