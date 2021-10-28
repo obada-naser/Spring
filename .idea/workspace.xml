@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6557794-0df5-4618-af17-64e397d52d51" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Models/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Repositories/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Controllers/AlbumController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Controllers/AlbumController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Models/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/Models/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/SongrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/java/asac/com/example/songr/SongrApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songr/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songr/src/main/resources/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/songr/src/main/resources/templates/Home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
