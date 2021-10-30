@@ -35,7 +35,7 @@ public class AlbumController {
 
 
         model.addAttribute("albums1",albums1);
-        return "Home";
+        return "Album_form";
     }
 
     @PostMapping("/newAlbums")

@@ -8,6 +8,7 @@ import java.util.List;
 public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id", nullable = false)
     private int id;
     private String title;
     private String artist;
