@@ -5,22 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Songs</title>
 </head>
 <body>
+
+
+<table>
+    <tr>
+
+        <th>Song title </th>
+
+
+        <th>Track Number </th>
+
+
+        <th>Song length</th>
+
+
+    </tr>
 
 
 
 <tr th:each="song: ${songs}">
     <td th:text="${song.title}" ></td>
-    </br>
     <td th:text="${song.trackNumber}" ></td>
-    </br>
-
     <td th:text="${song.length}" ></td>
 
 </tr>
-
+</table>
 
 </body>
 </html>

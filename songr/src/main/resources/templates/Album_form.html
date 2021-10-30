@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<form method="POST"  th:object="${album}" th:action="@{/newAlbums}">
+    <h3>Add new album:</h3>
+
+    <label >Title</label>
+    <input type="text" name="title"/>
+    <br>
+    <br>
+    <label >Artist</label>
+    <input type="text" name="artist"/>
+    <br>
+    <br>
+    <label >Number Of Songs</label>
+    <input type="number" name="songCount"/>
+    <br>
+    <br>
+    <label >Album Length</label>
+    <input type="number" name="length"/>
+    <br>
+    <br>
+    <label >Image</label>
+    <input type="text" name="imageUrl"/>
+    <br>
+    <br>
+    <button type="submit">Submit The Album</button>
+
+</form>
+
+
+
+
+<p th:text="${name}"></p>
+
+
+<tr th:each="album: ${albums1}">
+    <td th:text="${album.title}" ></td>
+    </br>
+    <td th:text="${album.artist}" ></td>
+    </br>
+    <td th:text="${album.songCount}" ></td>
+    </br>
+    <td th:text="${album.length}" ></td>
+    </br>
+    <img th:src="${album.imageUrl}" alt="image" />
+
+</tr>
+
+<br>
+<!--<br>-->
+
+<!--<tr th:each="album: ${newAlbum}">-->
+<!--    <td th:text="${album.title}" ></td>-->
+<!--    </br>-->
+<!--    <td th:text="${album.artist}" ></td>-->
+<!--    </br>-->
+<!--    <td th:text="${album.songCount}" ></td>-->
+<!--    </br>-->
+<!--    <td th:text="${album.length}" ></td>-->
+<!--    </br>-->
+<!--    <img th:src="${album.imageUrl}" alt="image" />-->
+
+<!--</tr>-->
+
+
+
+</body>
+</html>

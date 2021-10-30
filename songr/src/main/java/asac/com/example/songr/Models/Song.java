@@ -10,6 +10,7 @@ public class Song {
 
      @Id
      @GeneratedValue(strategy = GenerationType.IDENTITY)
+     @Column(name = "id", nullable = false)
      private int id;
      private String title;
      private double length;
@@ -25,6 +26,14 @@ public class Song {
           this.title = title;
           this.length = length;
           this.trackNumber = trackNumber;
+     }
+
+     public int getId() {
+          return id;
+     }
+
+     public void setId(int id) {
+          this.id = id;
      }
 
      public String getTitle() {

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" method="POST"  th:object="${song}"  th:action="'/addingSong'+${album.id}">
+    <h3>Add new song:</h3>
+
+    <label >Title</label>
+    <input type="text" name="title" field="*{title}"/>
+    <br>
+    <br>
+    <label >Length</label>
+    <input type="number" name="length" field="*{length}"/>
+    <br>
+    <br>
+    <label >Track number</label>
+    <input type="number" name="trackNumber" field="*{trackNumber}"/>
+    <br>
+    <br>
+    <p><input type="submit" value="Submit the song"> </p>
+
+</form>
+
+<div class="card">
+    <img th:src="album.imgUrl" alt="song" >
+    <br>
+    <h4> Album: <span th:text="${album.title}"></span>   </h4>
+    <p>Artist: <span th:text="${album.artist}"></span></p>
+    <p>Number of Songs: <span th:text="${album.songCount}"></span></p>
+    <p>length: <span  th:text="${album.length}"></span></p>
+
+</div>
+
+
+<table>
+    <tr>
+
+        <th>Song title: </th>
+
+        <th>Track Number: </th>
+
+        <th>Song length:</th>
+
+
+    </tr>
+
+
+
+    <tr th:each="song: ${album.songs}">
+        <td th:text="${song.title}" ></td>
+        <td th:text="${song.trackNumber}" ></td>
+        <td th:text="${song.length}" ></td>
+
+    </tr>
+</table>
+
+
+
+
+
+</body>
+</html>
